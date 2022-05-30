@@ -1,0 +1,10 @@
+type Query {
+  greeting: String
+  allPeople: [Person]
+}
+
+type Person {
+  id: ID!
+  name: String
+  sin: String
+}
