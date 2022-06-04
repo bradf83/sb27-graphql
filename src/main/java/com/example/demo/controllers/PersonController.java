@@ -6,7 +6,6 @@ import com.example.demo.models.Person;
 
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
-import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 
@@ -25,7 +24,7 @@ public class PersonController {
 
     @SchemaMapping
     // @Secured({ "ROLE_MANAGER" }) - Does not work
-    @PreAuthorize("hasRole('MANAGER')") // - Works
+    // @PreAuthorize("hasRole('MANAGER')") // - Works
     public String sin(Person person) throws Exception {
         // Test Exception
         // if (person.id() == 1) {
