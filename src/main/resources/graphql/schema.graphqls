@@ -8,3 +8,18 @@ type Person {
   name: String
   sin: String
 }
+
+type Holiday {
+  id: ID!
+  month: String
+  date: String
+}
+
+input HolidayAMonthInput {
+  january: String
+  february: String!
+}
+
+type Mutation {
+  addHolidays(holidays: HolidayAMonthInput!): [Holiday]
+}
